@@ -6,13 +6,13 @@ import { initializeApp } from "firebase/app";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCHNOgz8LmvXhGtU0ZoS-x3KWGhy3xSxbE",
-  authDomain: "react-chat-app-c68f8.firebaseapp.com",
-  projectId: "react-chat-app-c68f8",
-  storageBucket: "react-chat-app-c68f8.firebasestorage.app",
-  messagingSenderId: "600602286554",
-  appId: "1:600602286554:web:835d6f3dbec55e285dc8e3",
-  measurementId: "G-S81W9EZCLM"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 // Initialize Firebase
