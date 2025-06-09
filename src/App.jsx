@@ -18,20 +18,23 @@ function App() {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        navigate('/');
-
-        dispatch(setUser({
+        navigate("/");
+        const userData = {
           uid: user.uid,
-          photoURL: user.photoURL,
-          displayName: user.displayName
-        }))
+          displayName: user.displayName,
+          photoURL: user.photoURL
+        }
+        dispatch(setUser(userData));
       } else {
-        navigate('/login');
+        navigate("/login");
         dispatch(clearUser());
       }
-    })
-    return () => unsubscribe();
-  }, [])
+    });
+
+    return () => {
+      unsubscribe();
+    }
+  }, []);
 
   return (
     <Routes>

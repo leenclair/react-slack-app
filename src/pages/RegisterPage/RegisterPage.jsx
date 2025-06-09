@@ -27,8 +27,8 @@ function RegisterPage() {
 
             await updateProfile(auth.currentUser, {
                 displayName: data.name,
-                photoURL: `http://gravatar.com/avatar/${md5(
-                    createdUser.user.email)}?d=identicon`
+                photoURL: `https://secure.gravatar.com/avatar/${md5(
+                    createdUser.user.email)}?d=identicon&s=200`
             })
 
             //Firebase 데이터베이스에 저장해주기 
